@@ -14,29 +14,35 @@ public class App {
         cat.age = 35;
 
         // Ausgabe
-        System.out.println(cat.name);
-        System.out.println(cat.furcolor);
-        System.out.println(cat.age);
+        output(cat.tellYourName());
+        output(cat.tellYourFurcolor());
+        output(String.valueOf(cat.tellYourAge()));  //int --> String
 
-        System.out.println(("-------------"));
+        output("-------------");
 
         Cat cat2 = new Cat();
-        System.out.println(cat2);
+        output("Adresse des Objekts: " + cat2);
 
         // wertzuweisung
-        cat.name = "Grizabella";
-        cat.furcolor = "white";
-        cat.age = 29;
+        cat2.name = "Grizabella";
+        cat2.furcolor = "white";
+        cat2.age = 29;
         
         // Ausgabe
-        System.out.println(cat.name);
-        System.out.println(cat.furcolor);
-        System.out.println(cat.age);
-        
+        output(cat2.tellYourName());
+        output(cat2.tellYourFurcolor());
+        output(Integer.toString(cat2.tellYourAge())); // int --> String   
+
 
     }
 
-   
+   // static Methode --- in Klasse
+    public static void output(String outputStr){
+        System.out.println(outputStr);
+    }
+
+
+
 
 }
 

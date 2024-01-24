@@ -8,16 +8,21 @@ public class Cat {
 
 
 
-   
-public void tellYourName(){
-System.out.println(this.name);
+
+public String tellYourName(){
+    return this.name;
 }
 
+public String tellYourFurcolor(){
+    return this.furcolor;
+}
 
-    public void tellYouraddress(){
-        System.out.println(this);
-    }
+public int tellYourAge(){
+    return this.age;
+}
 
-
+public void tellYourAddress(){
+    System.out.println(this);
+}
 
 }
