@@ -5,14 +5,8 @@ public class App {
     public static void main(String[] args) {
 
         // objekt entsteht ...
-        Cat cat = new Cat(); // Instanzierung
-        System.out.println(cat);
-
-        // wertzuweisung
-        cat.name = "Alonzo";
-        cat.furcolor = "grey";
-        cat.age = 35;
-
+        Cat cat = new Cat("Alonzo", "grey" , 35); // Instanzierung
+        
         // Ausgabe
         output(cat.tellYourName());
         output(cat.tellYourFurcolor());
@@ -20,13 +14,9 @@ public class App {
 
         output("-------------");
 
-        Cat cat2 = new Cat();
+        Cat cat2 = new Cat("Grizabella", "white" , 29); // Instanzierung
         output("Adresse des Objekts: " + cat2);
 
-        // wertzuweisung
-        cat2.name = "Grizabella";
-        cat2.furcolor = "white";
-        cat2.age = 29;
         
         // Ausgabe
         output(cat2.tellYourName());
