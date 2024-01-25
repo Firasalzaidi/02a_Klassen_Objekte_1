@@ -2,9 +2,9 @@ package com.cc.java;
 
 public class Cat {
 
-   String name;     // Primitives
-   String furcolor; // Primitives
-   int age;         // Primitives
+   private String name;     // Primitives
+   private String furcolor; // Primitives
+   private int age;         // Primitives
 
 public Cat(String name, String furColor, int age) {
     this.name = name;
@@ -12,21 +12,37 @@ public Cat(String name, String furColor, int age) {
     this.age = age;
 }
 
-
-public String tellYourName(){
-    return this.name;
+public String getName() {
+    if (getPermission()) {
+        return name;
+    } else {
+        return "sorry, no permission!";
+    }
 }
 
-public String tellYourFurcolor(){
-    return this.furcolor;
+public void setName(String name) {
+    this.name = name;
 }
 
-public int tellYourAge(){
-    return this.age;
+public String getFurcolor() {
+    return furcolor;
 }
 
-public void tellYourAddress(){
-    System.out.println(this);
+
+public int getAge() {
+    return age;
 }
+
+public void setAge(int age) {
+    this.age = age;
+}
+
+private boolean getPermission(){
+    return false;
+}
+
+
+
+
 
 }
