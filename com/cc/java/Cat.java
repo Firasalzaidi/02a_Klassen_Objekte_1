@@ -28,7 +28,6 @@ public String getFurcolor() {
     return furcolor;
 }
 
-
 public int getAge() {
     return age;
 }
